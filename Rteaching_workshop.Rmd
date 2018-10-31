@@ -1,0 +1,34 @@
+---
+title: "R Teaching - Coding skill training"
+author: "Ralf Becker"
+date: "31 October 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## The Project
+
+We are using a dataset which is also used in [CORE ECON's Doing Economics projects - Project 3](https://www.core-econ.org/doing-economics/book/text/03-01.html).
+
+It refers to a tax experiment undertaken in the US, where in a restricted area an additional tax was imposed on sugary drinks. Details of the project are available from teh above link.
+
+The results of the experiment are written up in [Silver et al (2017)] (https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1002283). The data are available from the [Global Food Research Program](http://globalfoodresearchprogram.web.unc.edu/research-in-the-united-states/u-s-policy-evaluations/berkeley-ssb-tax/) but here we will use a prepared dataset.
+
+## The Data-Set
+
+Here is the dataset.
+
+```{r}
+# loads dat_c (datafile) and var_info
+load("SugarTaxData.RData") 
+str(dat_c)
+```
+
+This uploads two datasets: `dat_c` with the data and `var_info`, the former with the data and the latter with some variable descriptions.
+
+## This is where you get started
+
+...
