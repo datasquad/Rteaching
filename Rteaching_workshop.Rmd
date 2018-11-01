@@ -29,6 +29,61 @@ str(dat_c)
 
 This uploads two datasets: `dat_c` with the data and `var_info`, the former with the data and the latter with some variable descriptions.
 
-## This is where you get started
 
-...
+## How to Google effectively for help
+
+The following is a suggestion for how to demonstrate general error message Googling.
+
+First, student should write a line at a time into a console, testing what they just wrote worked. For example
+
+```{r}
+# loads dat_c (datafile) and var_info
+load("SugarTaxDat.RData") 
+```
+
+The above produces an error message. Students should read the last thing they did. Hopefully this would show them they misspelt `SugarTaxData.RData`.
+
+If this doesn't fix the problem, the student should read the error - checking whether they recognise it, or if it shows they made a typo.
+
+We'll move on to a new error - because the last one was a typo, which Googling often can't fix.
+
+The new error is below
+
+```{r}
+# loads dat_c (datafile) and var_info
+load("SugarTaxDat.RData")
+ggplot(data=dat_c, aes(size, price)) + geom_point()
+```
+
+```
+Error in ggplot(data = dat_c, aes(size, price)): could not find function "ggplot"
+Traceback:
+```
+
+With this error, the next step after the above would be to Google the whole thing. Students should check the search results to see if they can resolve the problem. Remind them that they shouldn't be concerned if most of all of the results don't solve their problem, or if they don't understand the result.
+
+This error doesn't produce useful results if you Google the whole thing.
+
+In this situation, students should identify which part of the error is the most important. In this case the phrase `could not find function "ggplot"` was the most important. Googling this part produces much more useful results.
+
+In summary, the following skills help students to Google error messages effectively:
+
+1. Write one line at a time, and test whether the code ran, and produced what the students expect
+2. If students encounter an error...
+3. Read the last thing they did to check it was what they intended
+4. Read the error to check if they are familiar with it, or if it reveals typos
+
+
+Does it contain one of these common error messages ?
+* 'No such file or directory'
+R cannot find the file, this could be because it is looking in the wrong place or you have mis-typed.[expand]
+* 'Error: object 'name' not found'
+R cannot find the object x. This could be because you've mistyped or because you need quotes around the name. [expand]
+* 'Could not find function "name"'
+R cannot find the function. This could be because you've mistyped or because you haven't used library() to load the package containing that function. [expand]
+
+5. If you can't find anything you can understand, google the whole error message.
+
+From the google search results click on the first item that contains stackoverflow this is the most useful site that coders use to ask and answer questions. If you don't understand the first answer you read don't worry it happens to all of us. Look at other stackoverflow questions and answers from the google search.
+
+
